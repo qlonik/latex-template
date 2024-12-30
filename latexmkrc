@@ -5,6 +5,7 @@ $out_dir = ".build";
 $pdf_mode = 5;
 push @extra_pdflatex_options, "-shell-escape";
 push @extra_xelatex_options, "-shell-escape";
+push @extra_lualatex_options, "-shell-escape";
 
 # From more writes package
 $clean_ext .= ' %R.mw';
