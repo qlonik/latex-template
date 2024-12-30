@@ -1,3 +1,6 @@
+# latexmk should redirect generated files
+/.build/
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
