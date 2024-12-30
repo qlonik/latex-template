@@ -1,0 +1,72 @@
+% vim:set tw=0:
+
+\documentclass[11pt, xelatex]{article}
+
+% region --- PACKAGES --- {{{
+
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\usepackage[%
+  % a4paper, margin=2cm,
+  letterpaper, margin=1in,
+]{geometry}
+\usepackage[style=numeric, sortcites=true, maxbibnames=99]{biblatex}
+
+\usepackage{comment}
+
+% hyperref has to be last
+\usepackage{hyperref}
+
+% endregion }}}
+
+% region --- COMMANDS --- {{{
+
+\newcommand{\ignore}[1]{}
+\newcommand{\email}[1]{%
+\href{mailto:#1}{\texttt{#1}}%
+}
+\newcommand{\acite}[1]{\citeauthor*{#1}~\cite{#1}}
+
+\newcommand{\etal}{\textit{et}\penalty50\ \textit{al}.}
+\newcommand{\ie}{\textit{i}.\textit{e}.}
+\newcommand{\eg}{\textit{e}.\textit{g}.}
+\def\etal.{et\penalty50\ al.}
+\def\ie.{\textit{i}.\textit{e}.}
+\def\eg.{\textit{e}.\textit{g}.}
+\def\Eg.{\textit{E}.\textit{g}.}
+
+% endregion }}}
+
+% region --- PACKAGE CONFIGURATION --- {{{
+
+\setmainlanguage{english}
+
+\title{Application}
+\author{Nikita Volodin}
+\date{}
+
+\hypersetup{%
+   colorlinks=true,
+   linkcolor=blue,
+   citecolor=green,
+   filecolor=magenta,
+   urlcolor=cyan
+}
+
+\pagenumbering{gobble}
+
+% \addbibresource{citations.bib}
+\setcounter{biburllcpenalty}{9000}
+
+% endregion }}}
+
+\begin{document}
+
+\maketitle
+
+
+
+% \pagebreak
+% \printbibliography[title={References}]
+
+\end{document}
